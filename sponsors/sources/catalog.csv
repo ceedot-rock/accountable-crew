@@ -1,0 +1,16 @@
+product,op,price_cents,endpoint
+ping,ping,1,https://rider-x402.fly.dev/api/x402/ping/ping
+pcc,compress,25,https://rider-x402.fly.dev/api/x402/pcc/compress
+pcc,decompress,10,https://rider-x402.fly.dev/api/x402/pcc/decompress
+pcc,info,2,https://rider-x402.fly.dev/api/x402/pcc/info
+slidx,compress,25,https://rider-x402.fly.dev/api/x402/slidx/compress
+slidx,decompress,10,https://rider-x402.fly.dev/api/x402/slidx/decompress
+slidx,info,2,https://rider-x402.fly.dev/api/x402/slidx/info
+cuni,check,10,https://rider-x402.fly.dev/api/x402/cuni/check
+cuni,seats,2,https://rider-x402.fly.dev/api/x402/cuni/seats
+cuni,emit,25,https://rider-x402.fly.dev/api/x402/cuni/emit
+cuni,ingest,25,https://rider-x402.fly.dev/api/x402/cuni/ingest
+trustream,pack,10,https://rider-x402.fly.dev/api/x402/trustream/pack
+trustream,unpack,10,https://rider-x402.fly.dev/api/x402/trustream/unpack
+trustream,info,2,https://rider-x402.fly.dev/api/x402/trustream/info
+awareness,scan,10,https://rider-x402.fly.dev/api/x402/awareness/scan

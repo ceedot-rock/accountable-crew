@@ -1,0 +1,27 @@
+captured_utc: 2026-10-22T15:41:01Z
+sandbox: shell/zetaris-crew (sbx_001m5j3a9zv794dtcg5ydd6kc40), shape large = 8 vCPU / 16384 MiB
+--- free -g ---
+               total        used        free      shared  buff/cache   available
+Mem:              15           0          14           0           0          15
+Swap:              0           0           0
+--- nproc ---
+8
+--- docker version ---
+client=29.9.2 server=29.9.2
+--- compose ---
+Docker Compose version v5.6.1
+--- images present ---
+postgres:15.1 544MB
+--- freemium services in compose ---
+  zetaris-db:
+  zetaris-server:
+  zetaris-api:
+  zetaris-gui:
+  privateai:
+  tools:
+  ollama:
+  opensearch-cluster-master:
+  digiavatar:
+  opensearch-data: # Persistent data volume for OpenSearch
+  ollama:
+  privateai:

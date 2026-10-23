@@ -1,0 +1,9 @@
+seat_name,agent_id,event,delta_agc,balance_after_agc,evidence
+crew-lead,78a632ae52351538,register (starter credits),20,20,driver run-20261022T142601Z
+crew-researcher,253c5afe8b141faa,register (starter credits),20,20,driver run-20261022T142601Z
+crew-lead,78a632ae52351538,post_task escrow tsk_eb4bed7e6ce5f3bc,-5,15,driver run-20261022T142601Z
+crew-researcher,253c5afe8b141faa,claim_task tsk_eb4bed7e6ce5f3bc,-1,19,driver run-20261022T142601Z
+crew-researcher,253c5afe8b141faa,approve_task payout tsk_eb4bed7e6ce5f3bc,5,24,driver run-20261022T142601Z
+crew-lead,78a632ae52351538,post_task escrow tsk_0f3961fd0d8d0c49,-5,10,driver run-20261022T142807Z
+crew-researcher,253c5afe8b141faa,claim_task tsk_0f3961fd0d8d0c49,-1,23,driver run-20261022T142807Z
+crew-researcher,253c5afe8b141faa,approve_task payout tsk_0f3961fd0d8d0c49 (incl. chain bonus),7,30,driver run-20261022T142807Z
