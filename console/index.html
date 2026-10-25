@@ -3,72 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Accountable Agent Crew — Console</title>
-<style>
-body{font-family:system-ui,sans-serif;max-width:960px;margin:2em auto;padding:0 1em;color:#111}
-section{border-top:2px solid #111;margin-top:2em;padding-top:1em}
-table{border-collapse:collapse;width:100%;font-size:.9em}
-th,td{border:1px solid #999;padding:.3em .5em;text-align:left;vertical-align:top}
-.mono{font-family:ui-monospace,monospace;font-size:.82em;word-break:break-all}
-.ok{color:#0a5}.bad{color:#a00}.note{color:#555;font-size:.85em}
-</style>
 </head>
 <body>
-<h1>Accountable Agent Crew — Console</h1>
-<p id="meta" class="note"></p>
-<section id="crew-view"><h2>Crew</h2><div id="crew-body"></div></section>
-<section id="mandate-view"><h2>Mandates &amp; Spend</h2><div id="mandate-body"></div></section>
-<section id="receipt-view"><h2>Receipt Trail</h2><div id="receipt-body"></div></section>
-<section id="tasks-view"><h2>Open Tasks (live)</h2><div id="tasks-body"></div></section>
-<section id="verify-view"><h2>Verification Status</h2><div id="verify-body"></div></section>
-<script src="snapshot.js"></script>
-<script>
-(function(){
-var s = CREW_SNAPSHOT;
-document.getElementById('meta').textContent =
-  'Run ' + s.run_id + ' · ' + s.checks.envelope_count + ' envelopes · snapshot ' + s.generated_at;
-var crew = '<table><tr><th>Seat</th><th>Actions in trail</th></tr>' +
-  s.seats.map(function(a){
-    return '<tr><td class="mono">' + a.agent_id + '</td><td>' + a.actions.join(', ') + '</td></tr>';
-  }).join('') + '</table>';
-document.getElementById('crew-body').innerHTML = crew;
-var mand = '<table><tr><th>Warrant fp</th><th>Holder</th><th>Cap (cents)</th></tr>' +
-  s.mandates.map(function(m){
-    return '<tr><td class="mono">' + m.fingerprint + '</td><td class="mono">' +
-      m.holder + '</td><td>' + m.cap_cents + '</td></tr>';
-  }).join('') + '</table><h3>Gate decisions</h3>' +
-  '<table><tr><th>Verdict</th><th>Caller</th><th>Cost</th><th>Warrant fp</th></tr>' +
-  s.decisions.map(function(d){
-    var cls = d.verdict === 'ALLOW' ? 'ok' : 'bad';
-    return '<tr><td class="' + cls + '">' + d.verdict + '</td><td class="mono">' +
-      d.caller_agent_id + '</td><td>' + d.cost_cents + '</td><td class="mono">' +
-      d.warrant_fingerprint + '</td></tr>';
-  }).join('') + '</table>';
-document.getElementById('mandate-body').innerHTML = mand;
-var rec = '<table><tr><th>#</th><th>Action</th><th>Verdict</th><th>Issued</th><th>SHA-256</th></tr>' +
-  s.receipts.map(function(r){
-    return '<tr><td>' + r.seq + '</td><td>' + r.action + '</td><td>' + r.verdict +
-      '</td><td class="mono">' + r.issued_at + '</td><td class="mono">' +
-      String(r.fingerprint_sha256).slice(0, 16) + '…</td></tr>';
-  }).join('') + '</table>' +
-  '<p class="note">Fingerprints shown, not verification claims. Full verify needs receipts.py + the fabric-phase1 dep.</p>';
-document.getElementById('receipt-body').innerHTML = rec;
-var t = '<table><tr><th>ID</th><th>Title</th><th>AGC</th></tr>' +
-  s.tasks_open.map(function(x){
-    return '<tr><td class="mono">' + x.id + '</td><td>' + x.title + '</td><td>' + x.reward + '</td></tr>';
-  }).join('') + '</table>';
-document.getElementById('tasks-body').innerHTML = t;
-var c = s.checks;
-var v = '<table><tr><th>Check</th><th>Result</th></tr>' +
-  '<tr><td>Envelopes</td><td>' + c.envelope_count + '</td></tr>' +
-  '<tr><td>Seq contiguous 1..n</td><td class="' + (c.seq_contiguous_1_to_n ? 'ok' : 'bad') + '">' +
-    c.seq_contiguous_1_to_n + '</td></tr>' +
-  '<tr><td>Required keys present</td><td class="' + (c.required_keys_present ? 'ok' : 'bad') + '">' +
-    c.required_keys_present + '</td></tr>' +
-  '<tr><td>Distinct signatures</td><td class="' + (c.distinct_envelope_signatures ? 'ok' : 'bad') + '">' +
-    c.distinct_envelope_signatures + '</td></tr>' +
-  '<tr><td>Crypto verify</td><td>' + s.verify.status + ' — ' + s.verify.detail + '</td></tr></table>';
-document.getElementById('verify-body').innerHTML = v;
-})();
-</script>
+<h1>Accountable Agent Crew</h1>
+<p>Placeholder shell (scaffold, Oct 22). Views land Sun Oct 25 per the build
+plan, driven by real snapshots from agent-loop / mandate-gate / receipts —
+see README.md in this folder. Do not wire views to invented data shapes.</p>
+<section id="crew-view"><h2>Crew</h2><!-- TODO: seats + task state (Rider MCP) --></section>
+<section id="mandate-view"><h2>Mandates &amp; Spend</h2><!-- TODO: warrant chains, caps, denials (mandate-gate) --></section>
+<section id="receipt-view"><h2>Receipt Trail</h2><!-- TODO: CuNi timeline + verify status (receipts/trail.jsonl) --></section>
 </body>
 </html>
