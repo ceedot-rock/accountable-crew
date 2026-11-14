@@ -93,8 +93,16 @@ work, pulled forward under Corey's "do all that needs to be done"):
 - Deterministic driver (`agent-loop/driver.py`): Scenario 1 end-to-end
   on the live rail, twice, both runs exit 0 with 12/12 receipts
   verified (`runs/run-20261022T142601Z/`, `runs/run-20261022T142807Z/`).
-- Tests: `tests/` — 47 unit tests, all passing
-  (`python3 -m unittest discover -s tests`).
+- Tests: `tests/` — 67 unit tests, all passing
+  (`python3 -m unittest discover -s tests`): the original 47 plus 20
+  for the NEAR leg.
+- **NEAR testnet leg built 2026-11-14** (`near-rail/`): NEAR Intents
+  swap declarations + Chain Signatures derivation, mandate-gated
+  before anything is built, dry-run only — no quote, no signature,
+  no broadcast. Live testnet RPC probe verified reachable
+  (chain_id=testnet, block 277,711,098 at 16:15 EST); demo receipt in
+  `runs/near-testnet-dryrun-20261114T211519Z.json`. Submit as
+  testnet-only, never as a live NEAR rail.
 - **Zetaris: NOT integrated — resource wall.** Corey ruled the
   self-hosted Freemium Docker route; this VM has 7.9 GB RAM (FAQ
   recommends ≥16 GB) and no container runtime; the Fly sprite is

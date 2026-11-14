@@ -1,0 +1,125 @@
+{
+  "demo": "near-testnet-dryrun",
+  "network": "testnet",
+  "run_at_utc": "20261114T211519Z",
+  "payout_account": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+  "signer_id": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+  "intent": {
+    "network": "testnet",
+    "signer_id": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+    "deadline": 1794691215222,
+    "nonce": "9a92d6ebf400aade",
+    "intents": [
+      {
+        "intent": "token_diff",
+        "diff": {
+          "wrap.testnet": "-1000000"
+        }
+      }
+    ],
+    "execution": "NOT_EXECUTED",
+    "status": "dry-run"
+  },
+  "intent_payload_hash_hex": "d3d313e54fe6ab41fdcd27c270a3318202185697a1fa62d480d71540dcf5108c",
+  "gate": {
+    "intent": {
+      "network": "testnet",
+      "signer_id": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+      "deadline": 1794691215222,
+      "nonce": "9a92d6ebf400aade",
+      "intents": [
+        {
+          "intent": "token_diff",
+          "diff": {
+            "wrap.testnet": "-1000000"
+          }
+        }
+      ],
+      "execution": "NOT_EXECUTED",
+      "status": "dry-run"
+    },
+    "executed": false,
+    "gate": {
+      "ok": true,
+      "body": {
+        "agent_id": "crew-researcher",
+        "max_cents": 40,
+        "until": 1794694515
+      },
+      "remaining_cents": 38
+    },
+    "execution": "dry-run only \u2014 quote/signature/broadcast not performed",
+    "remaining_cents": 38
+  },
+  "gate_decisions": [
+    {
+      "action": "gate.decision",
+      "verdict": "ALLOW",
+      "warrant_fingerprint": "4462d7c48d49d507",
+      "caller_agent_id": "crew-researcher",
+      "cost_cents": 2,
+      "cumulative_spent_cents": 2,
+      "ok": true,
+      "code": null,
+      "detail": "",
+      "remaining_cents": 38
+    }
+  ],
+  "testnet_rpc": {
+    "reachable": true,
+    "rpc_url": "https://rpc.testnet.near.org",
+    "network": "testnet",
+    "chain_id": "testnet",
+    "latest_block_height": 277711098,
+    "latest_block_hash": "FbrmN8GMPeTvWKAHZFaqSjjG3m1p7ejuo3FjFjFv1K2H"
+  },
+  "chain_signatures": {
+    "status": "NOT_SIGNED",
+    "reason": "no MPC contract configured (NEAR_MPC_CONTRACT unset): chain-signature request built, NOT sent",
+    "request_not_sent": {
+      "contract": null,
+      "method": "sign",
+      "args": {
+        "payload": [
+          211,
+          211,
+          19,
+          229,
+          79,
+          230,
+          171,
+          65,
+          253,
+          205,
+          39,
+          194,
+          112,
+          163,
+          49,
+          130,
+          2,
+          24,
+          86,
+          151,
+          161,
+          250,
+          98,
+          212,
+          128,
+          215,
+          21,
+          64,
+          220,
+          245,
+          16,
+          140
+        ],
+        "path": "44'/397'/0'/0'/1'",
+        "key_version": 0
+      },
+      "network": "testnet"
+    }
+  },
+  "derivation_path": "44'/397'/0'/0'/1'",
+  "honesty": "TESTNET DRY-RUN ONLY. No solver quote fetched, no signature produced, nothing broadcast or settled. Asset ids/amounts are illustrative dry-run values."
+}
