@@ -110,6 +110,7 @@ work, pulled forward under Corey's "do all that needs to be done"):
   are prepared from real data in `sponsors/sources/`; no Zetaris
   query has run and nothing may claim one has.
 - Console UI: not built yet (Mon Oct 26 slot in the plan).
-- Nothing here is deployed or public; no git repo yet (repo goes
-  public-ready Mon Oct 26, plan §6.3). Seat keys live in `.keys/`
-  (0600, gitignored) and are never committed.
+- Nothing here is deployed; seat keys live in `.keys/`
+  (0600, gitignored) and are never committed. Public repo:
+  github.com/ceedot-rock/accountable-crew — NEAR Build Beyond
+  Boundaries submission, Nov 14, 2026 (testnet-only leg).
