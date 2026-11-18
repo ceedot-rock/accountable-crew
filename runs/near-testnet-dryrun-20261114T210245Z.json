@@ -1,0 +1,123 @@
+{
+  "demo": "near-testnet-dryrun",
+  "network": "testnet",
+  "run_at_utc": "20261114T210245Z",
+  "payout_account": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+  "signer_id": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+  "intent": {
+    "network": "testnet",
+    "signer_id": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+    "deadline": 1794690454700,
+    "nonce": "672086892ebbcb9a",
+    "intents": [
+      {
+        "intent": "token_diff",
+        "diff": {
+          "wrap.testnet": "-1000000"
+        }
+      }
+    ],
+    "execution": "NOT_EXECUTED",
+    "status": "dry-run"
+  },
+  "intent_payload_hash_hex": "9a0deef9d8e646ad7376773521e174070bee8409905b0d2289db9b649232296d",
+  "gate": {
+    "intent": {
+      "network": "testnet",
+      "signer_id": "7cdb35e939ee4e51a7b47f8b411335ea683f7ec6285f4e73a1e35ad9b902719d",
+      "deadline": 1794690454700,
+      "nonce": "672086892ebbcb9a",
+      "intents": [
+        {
+          "intent": "token_diff",
+          "diff": {
+            "wrap.testnet": "-1000000"
+          }
+        }
+      ],
+      "execution": "NOT_EXECUTED",
+      "status": "dry-run"
+    },
+    "executed": false,
+    "gate": {
+      "ok": true,
+      "body": {
+        "agent_id": "crew-researcher",
+        "max_cents": 40,
+        "until": 1794693754
+      },
+      "remaining_cents": 38
+    },
+    "execution": "dry-run only \u2014 quote/signature/broadcast not performed",
+    "remaining_cents": 38
+  },
+  "gate_decisions": [
+    {
+      "action": "gate.decision",
+      "verdict": "ALLOW",
+      "warrant_fingerprint": "c3f236e45e90196e",
+      "caller_agent_id": "crew-researcher",
+      "cost_cents": 2,
+      "cumulative_spent_cents": 2,
+      "ok": true,
+      "code": null,
+      "detail": "",
+      "remaining_cents": 38
+    }
+  ],
+  "testnet_rpc": {
+    "reachable": false,
+    "rpc_url": "https://rpc.testnet.near.org",
+    "network": "testnet",
+    "error": "TimeoutError: The read operation timed out"
+  },
+  "chain_signatures": {
+    "status": "NOT_SIGNED",
+    "reason": "no MPC contract configured (NEAR_MPC_CONTRACT unset): chain-signature request built, NOT sent",
+    "request_not_sent": {
+      "contract": null,
+      "method": "sign",
+      "args": {
+        "payload": [
+          154,
+          13,
+          238,
+          249,
+          216,
+          230,
+          70,
+          173,
+          115,
+          118,
+          119,
+          53,
+          33,
+          225,
+          116,
+          7,
+          11,
+          238,
+          132,
+          9,
+          144,
+          91,
+          13,
+          34,
+          137,
+          219,
+          155,
+          100,
+          146,
+          50,
+          41,
+          109
+        ],
+        "path": "44'/397'/0'/0'/1'",
+        "key_version": 0
+      },
+      "network": "testnet"
+    }
+  },
+  "derivation_path": "44'/397'/0'/0'/1'",
+  "honesty": "TESTNET DRY-RUN ONLY. No solver quote fetched, no signature produced, nothing broadcast or settled. Asset ids/amounts are illustrative dry-run values."
+}
